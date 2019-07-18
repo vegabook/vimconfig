@@ -28,6 +28,7 @@ else
   set cursorline
 endif
 
+autocmd BufEnter *.r colorscheme alduin
 autocmd BufEnter sagb.r colorscheme revolutions
 autocmd BufEnter gyields.r colorscheme night_vision
 autocmd BufEnter gneural.r colorscheme CandyPaper
@@ -55,6 +56,7 @@ autocmd BufEnter *html* colorscheme gruvbox
 autocmd FileType python nnoremap <silent> <F9> :!clear;python2 %<CR>
 autocmd FileType python nnoremap <silent> <F12> :!clear;python3 %<CR>
 autocmd FileType javascript nnoremap <silent> <F10> :!clear;node %<CR>
+autocmd FileType r nnoremap <silent> <F8> :!clear;Rscript %<CR>
 
 colorscheme random
 
