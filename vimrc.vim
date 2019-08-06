@@ -3,6 +3,7 @@ Plug 'scrooloose/nerdtree'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'vim-scripts/CSApprox'
 Plug 'vim-scripts/vim-polyglot'
+Plug 'easymotion/vim-easymotion'
 call plug#end()
         
 set number 
