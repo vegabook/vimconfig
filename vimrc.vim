@@ -29,6 +29,9 @@ else
   set cursorline
 endif
 
+" nerdtree
+set modifiable
+
 autocmd BufEnter *.r colorscheme alduin
 autocmd BufEnter sagb.r colorscheme revolutions
 autocmd BufEnter gyields.r colorscheme night_vision
