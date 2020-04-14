@@ -38,7 +38,7 @@ autocmd BufEnter gyields.r colorscheme night_vision
 autocmd BufEnter gneural.r colorscheme CandyPaper
 autocmd BufEnter asw.r colorscheme VIvid
 autocmd BufEnter ndf.r colorscheme 3dglasses
-autocmd BufEnter *.py colorscheme 256_noir
+autocmd BufEnter *.py colorscheme 256-jungle
 autocmd BufEnter *.c colorscheme billw
 autocmd BufEnter *html* set tabstop=2|set shiftwidth=2
 autocmd BufEnter *.ex set tabstop=2|set shiftwidth=2
@@ -75,3 +75,7 @@ nmap <Right> gt
 map <Leader>nn <plug>NERDTreeTabsToggle<CR>
 syntax on
 
+" cursor modes
+let &t_SI = "\<esc>[5 q"  " blinking I-beam in insert mode
+let &t_SR = "\<esc>[3 q"  " blinking underline in replace mode
+let &t_EI = "\<esc>[ q"  " default cursor (usually blinking block) otherwise
