@@ -76,6 +76,15 @@ map <Leader>nn <plug>NERDTreeTabsToggle<CR>
 syntax on
 
 " cursor modes
-let &t_SI = "\<esc>[5 q"  " blinking I-beam in insert mode
-let &t_SR = "\<esc>[3 q"  " blinking underline in replace mode
-let &t_EI = "\<esc>[ q"  " default cursor (usually blinking block) otherwise
+"
+# let &t_SI = "\<esc>[5 q"  " blinking I-beam in insert mode
+# let &t_SR = "\<esc>[3 q"  " blinking underline in replace mode
+# let &t_EI = "\<esc>[ q"  " default cursor (usually blinking block) otherwise
+
+let &t_SI = "\<Esc>]12;yellow\x7"
+let &t_SR = "\<Esc>]12;red\x7"
+let &t_EI = "\<Esc>]12;blue\x7"
+
+" cursorline on off depending on insert vs normal mode
+:autocmd InsertEnter * set cul
+:autocmd InsertLeave * set nocul
