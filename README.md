@@ -22,6 +22,7 @@ _LINUX NEOVIM_
 
 _LINUX TMUX_
 - /home/[username]/vimconfig/tmux.conf /home/[username]/.tmux.conf
+- clone tmux-yank into /home/[username]/scripts/
 
 
 
