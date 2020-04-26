@@ -15,7 +15,10 @@ _LINUX VIM_
 
 _LINUX NEOVIM_
 - Clone into user directory
-- .vimrc must point to vimrc.vim in vimconfig. us ln -s /home/tbrowne/vimconfig/nvimrc.vim /home/tbrowne/.config/nvim/init.vim
+- .vimrc must point to vimrc.vim in vimconfig. us ln -s /home/[username]/vimconfig/nvimrc.vim /home/[username]/.config/nvim/init.vim
+
+_LINUX TMUX_
+- /home/[username]/vimconfig/tmux.conf /home/[username]/.tmux.conf
 
 
 
