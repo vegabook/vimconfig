@@ -20,8 +20,8 @@ autocmd BufEnter */models/*.*ex* colorscheme black_angus
 autocmd BufEnter */views/*.*ex* colorscheme jellybeans 
 autocmd BufEnter */templates/*.*ex* colorscheme jellybeans 
 autocmd BufEnter */assets/css/*.*ex* colorscheme base16-atelierlakeside 
-autocmd FileType python nnoremap <silent> <F12> :!clear;python3 %<CR>
-autocmd FileType javascript nnoremap <silent> <F10> :!clear;node %<CR>
+autocmd FileType python nnoremap <silent> <F12> :!clear; python3 %<CR>
+autocmd FileType javascript nnoremap <silent> <F10> :!clear; node %<CR>
 autocmd FileType r nnoremap <silent> <F8> :!clear;Rscript %<CR>
 
 " set mouse mode so it scrolls properly in tmux

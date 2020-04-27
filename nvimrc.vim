@@ -1,11 +1,16 @@
 call plug#begin('~/.vim/plugged')
 Plug 'scrooloose/nerdtree'
 Plug 'christoomey/vim-tmux-navigator'
+"Plug 'kassio/neoterm'
+"Plug 'vim-test/vim-test'
 call plug#end()
         
 set statusline=[%n]\ %F%=L\ %l/%L\ \ C\ %c\ 
 " nerdtree
 set modifiable
+
+" numbers on the side
+set number
 
 autocmd BufEnter *html* set tabstop=2|set shiftwidth=2
 autocmd BufEnter *.ex set tabstop=2|set shiftwidth=2
@@ -20,15 +25,18 @@ autocmd BufEnter */models/*.*ex* colorscheme black_angus
 autocmd BufEnter */views/*.*ex* colorscheme jellybeans 
 autocmd BufEnter */templates/*.*ex* colorscheme jellybeans 
 autocmd BufEnter */assets/css/*.*ex* colorscheme base16-atelierlakeside 
-autocmd FileType python nnoremap <silent> <F12> :!clear;python3 %<CR>
-autocmd FileType javascript nnoremap <silent> <F10> :!clear;node %<CR>
-autocmd FileType r nnoremap <silent> <F8> :!clear;Rscript %<CR>
+autocmd FileType python nnoremap <silent> <F12> :term python3 %<CR>
+autocmd FileType javascript nnoremap <silent> <F10> :term node %<CR>
+autocmd FileType r nnoremap <silent> <F8> :term Rscript %<CR>
 
 " set mouse mode so it scrolls properly in tmux
 set mouse=a
 
 " set colorscheme to terminal default
 set termguicolors
+
+" transparent background
+hi Normal guibg=NONE ctermbg=NONE
 
 " macros
 let mapleader=","
