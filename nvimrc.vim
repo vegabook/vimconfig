@@ -1,7 +1,7 @@
 call plug#begin('~/.vim/plugged')
 Plug 'scrooloose/nerdtree'
 Plug 'christoomey/vim-tmux-navigator'
-"Plug 'kassio/neoterm'
+Plug 'kassio/neoterm'
 "Plug 'vim-test/vim-test'
 call plug#end()
         
@@ -25,9 +25,10 @@ autocmd BufEnter */models/*.*ex* colorscheme black_angus
 autocmd BufEnter */views/*.*ex* colorscheme jellybeans 
 autocmd BufEnter */templates/*.*ex* colorscheme jellybeans 
 autocmd BufEnter */assets/css/*.*ex* colorscheme base16-atelierlakeside 
-autocmd FileType python nnoremap <silent> <F12> :term python3 %<CR>
-autocmd FileType javascript nnoremap <silent> <F10> :term node %<CR>
-autocmd FileType r nnoremap <silent> <F8> :term Rscript %<CR>
+autocmd FileType python nnoremap <silent> <F12> :T python3 % \|\| echo -e "\e[41mFailed...\e[0m" && read -p "Press Enter..." && exit<CR>
+autocmd FileType python nnoremap <silent> <F8> :T ipython --nosep -i % \|\| echo -e "\e[41mFailed...\e[0m" && read -p "Press Enter..." && exit<CR>
+autocmd FileType javascript nnoremap <silent> <F9> :T node %<CR>
+autocmd FileType r nnoremap <silent> <F8> :T Rscript %<CR>
 
 " set mouse mode so it scrolls properly in tmux
 set mouse=a
@@ -46,9 +47,14 @@ nmap <Right> gt
 map <Leader>nn <plug>NERDTreeTabsToggle<CR>
 syntax on
 
-" cursor modes
+" neo term config bottom terminal instead of new screen
+let g:neoterm_default_mod='botright' 
+let g:neoterm_autoscroll = '1'
+let g:neoterm_size = 44
+let g:neoterm_autoinsert = '1'
+let g:neoterm_keep_term_open = 0
 
-let &t_SI = "\<Esc>]12;yellow\x7"
-let &t_SR = "\<Esc>]12;red\x7"
-let &t_EI = "\<Esc>]12;blue\x7"
+
+
+
 
