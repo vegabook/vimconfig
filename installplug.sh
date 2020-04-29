@@ -20,14 +20,14 @@ ln -s $HOME/vimconfig/tmux.conf $HOME/.tmux.conf
 
 # install tmux status line colour variables
 # in bashrc if they do not exist
-if grep -Fxq "TMUXSTATBG" $HOME/.bashrc
+if grep "TMUXSTATBG" $HOME/.bashrc
 then
 	:
 else
 	echo "" >> $HOME/.bashrc
 	echo '# environment variables for tmux colours' >> $HOME/.bashrc
-	echo 'export $TMUXSTATBG="#6655CC"' >> $HOME/.bashrc
-	echo 'export $TMUXSTATFG="#EEEEEE"' >> $HOME/.bashrc
+	echo 'export TMUXSTATBG="#555566"' >> $HOME/.bashrc
+	echo 'export TMUXSTATFG="#EEEEEE"' >> $HOME/.bashrc
 fi
 
 # instructions to user
