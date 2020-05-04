@@ -28,13 +28,13 @@ autocmd BufEnter */assets/css/*.*ex* colorscheme base16-atelierlakeside
 
 " python and neovim with tmux runners and ctrl-k mapping
 autocmd FileType python nnoremap <silent> <F12> :T python3 % \|\| echo -e "\e[41mFailed...\e[0m" && read -p "Press Enter..." && exit<CR>
-autocmd FileType python nnoremap <silent> <F8> :T ipython --nosep -i % \|\| echo -e "\e[41mFailed...\e[0m" && read -p "Press Enter..." && exit<CR>
+autocmd FileType python nnoremap <silent> <F8> :T ipython --nosep -i % \|\| echo -e "\e[41mFailed...\e[0m" && exit<CR>
 " make ctrl-K work as with TMUX vim navigator
 autocmd FileType python tnoremap <silent> <C-k> <C-\><C-n><C-w>k
 
 " javascript and R runners
 autocmd FileType javascript nnoremap <silent> <F9> :T node %<CR>
-autocmd FileType r nnoremap <silent> <F8> :T Rscript %<CR>
+autocmd FileType r nnoremap <silent> <F7> :T Rscript %<CR>
 
 " set mouse mode so it scrolls properly in tmux
 set mouse=a
