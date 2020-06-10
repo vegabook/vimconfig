@@ -13,7 +13,21 @@ set modifiable
 
 " numbers on the side
 set number
+" specific file color schemes
+autocmd BufEnter sagb.r colorscheme revolutions
+autocmd BufEnter gyields.r colorscheme night_vision
+autocmd BufEnter gneural.r colorscheme CandyPaper
+autocmd BufEnter asw.r colorscheme VIvid
+autocmd BufEnter ndf.r colorscheme 3dglasses
 
+# elixir 
+autocmd BufEnter */controllers/*.*ex* colorscheme antares   
+autocmd BufEnter */models/*.*ex* colorscheme black_angus
+autocmd BufEnter */views/*.*ex* colorscheme jellybeans 
+autocmd BufEnter */templates/*.*ex* colorscheme jellybeans 
+autocmd BufEnter */assets/css/*.*ex* colorscheme base16-atelierlakeside 
+
+" generic
 autocmd BufEnter *html* set tabstop=2|set shiftwidth=2
 autocmd BufEnter *.ex set tabstop=2|set shiftwidth=2
 autocmd BufEnter *.exs set tabstop=2|set shiftwidth=2
@@ -22,11 +36,6 @@ autocmd BufEnter *.c set tabstop=2|set shiftwidth=2
 autocmd BufEnter *.py set tabstop=4|set shiftwidth=4|colorscheme dw_green
 autocmd BufEnter *.r set tabstop=4|set shiftwidth=4
 autocmd BufEnter *js* set tabstop=2|set shiftwidth=2
-autocmd BufEnter */controllers/*.*ex* colorscheme antares   
-autocmd BufEnter */models/*.*ex* colorscheme black_angus
-autocmd BufEnter */views/*.*ex* colorscheme jellybeans 
-autocmd BufEnter */templates/*.*ex* colorscheme jellybeans 
-autocmd BufEnter */assets/css/*.*ex* colorscheme base16-atelierlakeside 
 
 " python and neovim with tmux runners and ctrl-k mapping
 autocmd FileType python nnoremap <silent> <F12> :T python3 % \|\| echo -e "\e[41mFailed...\e[0m" && read -p "Press Enter..." && exit<CR>
@@ -62,7 +71,8 @@ let g:neoterm_size = 44
 let g:neoterm_autoinsert = '1'
 let g:neoterm_keep_term_open = 0
 
-
+" nerdtree close on open a file
+let g:NERDTreeQuitOnOpen = 1
 
 
 
