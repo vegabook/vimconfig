@@ -20,7 +20,7 @@ autocmd BufEnter gneural.r colorscheme CandyPaper
 autocmd BufEnter asw.r colorscheme VIvid
 autocmd BufEnter ndf.r colorscheme 3dglasses
 
-# elixir 
+" elixir 
 autocmd BufEnter */controllers/*.*ex* colorscheme antares   
 autocmd BufEnter */models/*.*ex* colorscheme black_angus
 autocmd BufEnter */views/*.*ex* colorscheme jellybeans 
