@@ -34,7 +34,7 @@ autocmd BufEnter *.exs set tabstop=2|set shiftwidth=2
 autocmd BufEnter *.eex set tabstop=2|set shiftwidth=2
 autocmd BufEnter *.c set tabstop=2|set shiftwidth=2
 autocmd BufEnter *.py set tabstop=4|set shiftwidth=4|colorscheme dw_green
-autocmd BufEnter *.r set tabstop=4|set shiftwidth=4
+autocmd BufEnter *.r set tabstop=4|set shiftwidth=4|colorscheme dw_cyan
 autocmd BufEnter *js* set tabstop=2|set shiftwidth=2
 
 " python and neovim with tmux runners and ctrl-k mapping
@@ -45,7 +45,7 @@ autocmd FileType python tnoremap <silent> <C-k> <C-\><C-n><C-w>k
 
 " javascript and R runners
 autocmd FileType javascript nnoremap <silent> <F9> :T node %<CR>
-autocmd FileType r nnoremap <silent> <F7> :T Rscript %<CR>
+autocmd FileType r nnoremap <silent> <F7> :T Rscript % && read -rsn1 -p"Press any key to continue";echo<CR>
 
 " set mouse mode so it scrolls properly in tmux
 set mouse=a
