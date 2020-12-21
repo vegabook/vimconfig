@@ -56,6 +56,9 @@ set termguicolors
 " transparent background
 hi Normal guibg=NONE ctermbg=NONE
 
+" tabs as spaces
+set expandtab
+
 " macros
 let mapleader=","
 nmap <leader>ne :NERDTree<cr>
