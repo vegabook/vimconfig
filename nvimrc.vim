@@ -5,6 +5,7 @@ Plug 'kassio/neoterm'
 "Plug 'prabirshrestha/async.vim'
 "Plug 'prabirshrestha/vim-lsp'
 "Plug 'vim-test/vim-test'
+"Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
         
 set statusline=[%n]\ %F%=L\ %l/%L\ \ C\ %c\ 
