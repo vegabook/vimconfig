@@ -8,6 +8,17 @@ Plug 'kassio/neoterm'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}"
 "Plug 'rust-lang/rust.vim'"
 call plug#end()
+
+" this changes coc.nvim colours on provide colour change
+func! s:my_colors_setup() abort
+  highlight CocFloating ctermbg=grey
+  highlight CocErrorFloat ctermfg=yellow 
+endfunc
+
+augroup colorscheme_coc_setup | au!
+  au ColorScheme * call s:my_colors_setup()
+augroup END
+" END of co.nvim colour change
         
 set statusline=[%n]\ %F%=L\ %l/%L\ \ C\ %c\ 
 " nerdtree
@@ -35,7 +46,7 @@ autocmd BufEnter *.ex set tabstop=2|set shiftwidth=2
 autocmd BufEnter *.exs set tabstop=2|set shiftwidth=2
 autocmd BufEnter *.eex set tabstop=2|set shiftwidth=2
 autocmd BufEnter *.c set tabstop=2|set shiftwidth=2
-autocmd BufEnter *.py set tabstop=4|set shiftwidth=4|colorscheme dw_green
+" autocmd BufEnter *.py set tabstop=4|set shiftwidth=4|colorscheme dw_green
 autocmd BufEnter *.r set tabstop=4|set shiftwidth=4|colorscheme dw_cyan
 autocmd BufEnter *js* set tabstop=2|set shiftwidth=2
 
@@ -47,7 +58,7 @@ autocmd FileType python tnoremap <silent> <C-k> <C-\><C-n><C-w>k
 
 " javascript and R and Rust runners
 autocmd FileType javascript nnoremap <silent> <F12> :T node %<CR>
-autocmd FileType r nnoremap <silent> <F12> :T Rscript % && read -rsn1 -p"Press any key to continue";echo<CR>
+autocmd FileType r nnoremap <silent> <F12> :T R < % --no-save --interactive && read -rsn1 -p"Press any key to continue" && exit<CR>
 autocmd FileType rust nnoremap <silent> <F12> :T cargo run \|\| echo -e "\e[41mFailed...\e[0m" && read -p "Press Enter..." && exit<CR>
 
 " set mouse mode so it scrolls properly in tmux
@@ -79,6 +90,5 @@ let g:neoterm_keep_term_open = 0
 
 " nerdtree close on open a file
 let g:NERDTreeQuitOnOpen = 1
-
 
 
