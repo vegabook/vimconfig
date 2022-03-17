@@ -18,6 +18,12 @@ endfunc
 augroup colorscheme_coc_setup | au!
   au ColorScheme * call s:my_colors_setup()
 augroup END
+
+augroup colorscheme_coc_setup2 | au!
+  au VimEnter * call s:my_colors_setup()
+augroup END
+
+
 " END of co.nvim colour change
         
 set statusline=[%n]\ %F%=L\ %l/%L\ \ C\ %c\ 
@@ -46,7 +52,7 @@ autocmd BufEnter *.ex set tabstop=2|set shiftwidth=2
 autocmd BufEnter *.exs set tabstop=2|set shiftwidth=2
 autocmd BufEnter *.eex set tabstop=2|set shiftwidth=2
 autocmd BufEnter *.c set tabstop=2|set shiftwidth=2
-" autocmd BufEnter *.py set tabstop=4|set shiftwidth=4|colorscheme dw_green
+autocmd BufEnter *.py set tabstop=4|set shiftwidth=4|colorscheme dw_green
 autocmd BufEnter *.r set tabstop=4|set shiftwidth=4|colorscheme dw_cyan
 autocmd BufEnter *js* set tabstop=2|set shiftwidth=2
 
