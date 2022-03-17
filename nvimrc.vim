@@ -2,11 +2,8 @@ call plug#begin('~/.vim/plugged')
 Plug 'scrooloose/nerdtree'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'kassio/neoterm'
-"Plug 'prabirshrestha/async.vim'
-"Plug 'prabirshrestha/vim-lsp'
-"Plug 'vim-test/vim-test'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}"
-"Plug 'rust-lang/rust.vim'"
+Plug 'elixir-editors/vim-elixir'
 call plug#end()
 
 " this changes coc.nvim colours on provide colour change
