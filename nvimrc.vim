@@ -84,6 +84,11 @@ nmap <leader>ne :NERDTree<cr>
 nmap <Left> gT
 nmap <Right> gt
 map <Leader>nn <plug>NERDTreeTabsToggle<CR>
+
+# switch off F1 help key binding
+nmap <F1> :echo<CR>
+imap <F1> <C-o>:echo<CR>
+
 syntax on
 
 " neo term config bottom terminal instead of new screen
