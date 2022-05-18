@@ -85,7 +85,7 @@ nmap <Left> gT
 nmap <Right> gt
 map <Leader>nn <plug>NERDTreeTabsToggle<CR>
 
-# switch off F1 help key binding
+" switch off F1 help key binding
 nmap <F1> :echo<CR>
 imap <F1> <C-o>:echo<CR>
 
@@ -100,5 +100,9 @@ let g:neoterm_keep_term_open = 0
 
 " nerdtree close on open a file
 let g:NERDTreeQuitOnOpen = 1
+
+" timeout length
+set timeoutlen=1000
+set ttimeoutlen=10
 
 
