@@ -1,3 +1,12 @@
+" TODO
+" change F key mappings for execution and auto-detect language including RUST
+" Elixir integration somehow
+" better terminal in nvim (stays across tabs)
+" better colours for language server
+" install treesitter
+" LUA integration different colours for blocks (long term)
+
+
 call plug#begin('~/.vim/plugged')
 Plug 'scrooloose/nerdtree'
 Plug 'christoomey/vim-tmux-navigator'
