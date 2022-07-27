@@ -13,6 +13,7 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'kassio/neoterm'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}"
 Plug 'elixir-editors/vim-elixir'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 call plug#end()
 
 " this changes coc.nvim colours on provide colour change
