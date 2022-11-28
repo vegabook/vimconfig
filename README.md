@@ -16,14 +16,15 @@
 
 ### _LINUX NEOVIM_
 - Clone into user directory
-- .vimrc must point to vimrc.vim in vimconfig. us ln -s /home/tbrowne/vimconfig/nvimrc.vim /home/tbrowne/.config/nvim/init.vim
+- .vimrc must point to vimrc.vim in vimconfig. 
+- ln -s /home/tbrowne/vimconfig/nvimrc.vim /home/tbrowne/.config/nvim/init.vim
 - ln -s /home/tbrowne/vimconfig/colors /home/tbrowne/.config/nvim/colors
 - ln -s /home/tbrowne/vimconfig/coc-settings.json /home/tbrowne/.config/coc-settings.json
 - make sure that the above username tbrowne is appropriate
 
 
 ### _LINUX TMUX_
-- ln -s /home/[username]/vimconfig/tmux.conf /home/[username]/.tmux.conf
+- ln -s /home/tbrowne/vimconfig/tmux.conf /home/tbrowne/.tmux.conf
 - clone tmux-yank into /home/[username]/scripts/
 
 
