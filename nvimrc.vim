@@ -67,8 +67,11 @@ autocmd BufEnter *js* set tabstop=2|set shiftwidth=2
 " python and neovim with tmux runners and ctrl-k mapping
 " autocmd FileType python nnoremap <silent> <F12> :vert T python3 % \|\| echo -e "\e[41mFailed...\e[0m" && read -p "Press Enter..." && exit<CR>
 " autocmd FileType python nnoremap <silent> <F8> :vert T ipython --nosep -i % \|\| echo -e "\e[41mFailed...\e[0m" && exit<CR>
-autocmd FileType python nnoremap <silent> <F12> :T python3 % \|\| echo -e "\e[41mFailed...\e[0m" && read -p "Press Enter..." && exit<CR>
 autocmd FileType python nnoremap <silent> <F8> :T ipython --nosep -i % \|\| echo -e "\e[41mFailed...\e[0m" && exit<CR>
+autocmd FileType python nnoremap <silent> <C-\> :w \| :T ipython --nosep -i % \|\| echo -e "\e[41mFailed...\e[0m" && exit<CR>
+autocmd FileType python inoremap <silent> <C-\> <esc> \| :w \| :T ipython --nosep -i % \|\| echo -e "\e[41mFailed...\e[0m" && exit<CR>
+autocmd FileType rust inoremap <silent> <C-\> <esc> \| :w \| :T clear && cargo run % \|\| echo -e "\e[41mFailed...\e[0m" && read -p "Press Enter..." && exit<CR>
+autocmd FileType rust nnoremap <silent> <C-\> :w \| :T clear && cargo run % \|\| echo -e "\e[41mFailed...\e[0m" && read -p "Press Enter..." && exit<CR>
 " make ctrl-K work as with TMUX vim navigator
 autocmd FileType python tnoremap <silent> <C-k> <C-\><C-n><C-w>k
 
