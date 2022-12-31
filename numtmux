@@ -1,0 +1,10 @@
+#!/bin/sh
+numtmux=$(ps aux | grep -i tmux | wc -l)
+numtmux=$((numtmux - 4))
+tstring=""
+char="t"
+for i in $(seq 1 $numtmux); do
+        tstring="$tstring$char"
+done
+echo $tstring
+

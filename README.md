@@ -28,5 +28,6 @@ ln -s /home/tbrowne/vimconfig/tmux.conf /home/tbrowne/.tmux.conf
 - clone tmux-yank into /home/[username]/scripts/
 
 
-
+### numtmux
+See the script `numtmux` which outputs the number of tmux sessions in a string, and see `ps1_with_numtmux.md` which shows how to use it in a prompt. 
 
