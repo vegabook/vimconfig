@@ -1,0 +1,10 @@
+#!/bin/sh
+numtmux=$(ps aux | grep -i 'tmux attach' | wc -l)
+numtmux=$((numtmux - 1))
+tstring=""
+char="a"
+for i in $(seq 1 $numtmux); do
+        tstring="$tstring$char"
+done
+echo $tstring
+
