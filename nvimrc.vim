@@ -14,6 +14,7 @@ Plug 'kassio/neoterm'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}"
 Plug 'elixir-editors/vim-elixir'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'mlochbaum/BQN', {'rtp': 'editors/vim'}
 call plug#end()
 
 " this changes coc.nvim colours on provide colour change
