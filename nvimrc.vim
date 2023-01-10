@@ -93,6 +93,9 @@ hi Normal guibg=NONE ctermbg=NONE
 " tabs as spaces
 set expandtab
 
+" cursorline
+set cursorline
+
 " macros
 let mapleader=","
 nmap <leader>ne :NERDTree<cr>
