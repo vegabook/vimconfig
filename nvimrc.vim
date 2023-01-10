@@ -69,6 +69,8 @@ autocmd FileType python nnoremap <silent> <F8> :T IPYTHONDIR=$HOME ipython --nos
 autocmd FileType python nnoremap <silent> <F12> :T python3 % \|\| echo -e "\e[41mFailed...\e[0m" && read -p "Press Enter..." && exit<CR>
 autocmd FileType python nnoremap <silent> <C-\> :Tclose \| :w \| :T IPYTHONDIR=$HOME ipython --nosep -i % \|\| echo -e "\e[41mFailed...\e[0m" && exit<CR>
 autocmd FileType python inoremap <silent> <C-\> <esc> \| :w \| :Tclose \| :T IPYTHONDIR=$HOME ipython --nosep -i % \|\| echo -e "\e[41mFailed...\e[0m" && exit<CR>
+autocmd FileType bqn nnoremap <silent> <C-\> :Tclose \| :w \| :T BQN -f % && echo && read -n 1 -s -r -p "Press any key to continue" && exit <CR>
+autocmd FileType bqn inoremap <silent> <C-\> <esc> :Tclose \| :w \| :T BQN -f % && echo && read -n 1 -s -r -p "Press any key to continue" && exit<CR>
 autocmd FileType rust inoremap <silent> <C-\> <esc> \| :w \| :T clear && cargo run % \|\| echo -e "\e[41mFailed...\e[0m" && read -p "Press Enter..." && exit<CR>
 autocmd FileType rust nnoremap <silent> <C-\> :w \| :T clear && cargo run % \|\| echo -e "\e[41mFailed...\e[0m" && read -p "Press Enter..." && exit<CR>
 " make ctrl-K work as with TMUX vim navigator
