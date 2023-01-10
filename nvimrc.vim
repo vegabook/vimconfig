@@ -59,9 +59,9 @@ autocmd BufEnter *html* set tabstop=2|set shiftwidth=2
 autocmd BufEnter *.ex set tabstop=2|set shiftwidth=2
 autocmd BufEnter *.exs set tabstop=2|set shiftwidth=2
 autocmd BufEnter *.eex set tabstop=2|set shiftwidth=2
+autocmd BufEnter *.heex set tabstop=2|set shiftwidth=2
 autocmd BufEnter *.c set tabstop=2|set shiftwidth=2
-autocmd BufEnter *.py set tabstop=4|set shiftwidth=4|colorscheme base16-atelierseaside
-autocmd BufEnter *ali* set tabstop=4|set shiftwidth=4|colorscheme dw_green
+autocmd BufEnter *.py set tabstop=4|set shiftwidth=4|colorscheme abstract
 autocmd BufEnter *.r set tabstop=4|set shiftwidth=4|colorscheme dw_cyan
 autocmd BufEnter *js* set tabstop=2|set shiftwidth=2
 
