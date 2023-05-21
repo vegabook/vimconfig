@@ -117,7 +117,8 @@ if ! shopt -oq posix; then
 fi
 alias vim=nvim
 alias ipython=ipython3
-alias ls = "ls -lh"
+# alias ls for ls -lh but keep colours
+alias ls="ls -lh --color=auto"
 export PATH=/home/tbrowne/scripts:$PATH
 export PATH=/home/tbrowne/.local/bin:$PATH
 export TMUXSTATFG=colour0
