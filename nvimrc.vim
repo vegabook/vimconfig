@@ -15,6 +15,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}"
 Plug 'elixir-editors/vim-elixir'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'mlochbaum/BQN', {'rtp': 'editors/vim'}
+Plug 'git@git.sr.ht:~detegr/nvim-bqn'
 call plug#end()
 
 " this changes coc.nvim colours on provide colour change
