@@ -42,11 +42,6 @@ set modifiable
 " numbers on the side
 set number
 " specific file color schemes
-autocmd BufEnter sagb.r colorscheme revolutions
-autocmd BufEnter gyields.r colorscheme night_vision
-autocmd BufEnter gneural.r colorscheme CandyPaper
-autocmd BufEnter asw.r colorscheme VIvid
-autocmd BufEnter ndf.r colorscheme 3dglasses
 
 " elixir 
 autocmd BufEnter */controllers/*.*ex* colorscheme antares   
@@ -66,10 +61,16 @@ autocmd BufEnter *.py set tabstop=4|set shiftwidth=4|colorscheme argonaut
 autocmd BufEnter *.r set tabstop=4|set shiftwidth=4|colorscheme dw_cyan
 autocmd BufEnter *js* set tabstop=2|set shiftwidth=2
 
+autocmd BufEnter sagb.r colorscheme gruvbox
+autocmd BufEnter gyields.r colorscheme night_vision
+autocmd BufEnter gneural.r colorscheme CandyPaper
+autocmd BufEnter asw.r colorscheme VIvid
+autocmd BufEnter ndf.r colorscheme 3dglasses
+
 autocmd FileType python nnoremap <silent> <F8> :T IPYTHONDIR=$HOME ipython --nosep -i % \|\| echo -e "\e[41mFailed...\e[0m" && exit<CR>
 autocmd FileType python nnoremap <silent> <F12> :T python3 % \|\| echo -e "\e[41mFailed...\e[0m" && read -p "Press Enter..." && exit<CR>
-autocmd FileType python nnoremap <silent> <C-\> :Tclose \| :w \| :T IPYTHONDIR=$HOME ipython --nosep -i % \|\| echo -e "\e[41mFailed...\e[0m" && exit<CR>
-autocmd FileType python inoremap <silent> <C-\> <esc> \| :w \| :Tclose \| :T IPYTHONDIR=$HOME ipython --nosep -i % \|\| echo -e "\e[41mFailed...\e[0m" && exit<CR>
+autocmd FileType python nnoremap <silent> <C-\> :Tclose \| :w! \| :T IPYTHONDIR=$HOME ipython --nosep -i % \|\| echo -e "\e[41mFailed...\e[0m" && exit<CR>
+autocmd FileType python inoremap <silent> <C-\> <esc> \| :w! \| :Tclose \| :T IPYTHONDIR=$HOME ipython --nosep -i % \|\| echo -e "\e[41mFailed...\e[0m" && exit<CR>
 autocmd FileType bqn nnoremap <silent> <C-\> :Tclose \| :w \| :T BQN -f % && echo && read -n 1 -s -r -p "Press any key to continue" && exit <CR>
 autocmd FileType bqn inoremap <silent> <C-\> <esc> :Tclose \| :w \| :T BQN -f % && echo && read -n 1 -s -r -p "Press any key to continue" && exit<CR>
 autocmd FileType rust inoremap <silent> <C-\> <esc> \| :w \| :T clear && cargo run % \|\| echo -e "\e[41mFailed...\e[0m" && read -p "Press Enter..." && exit<CR>
