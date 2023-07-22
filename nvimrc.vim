@@ -8,10 +8,11 @@
 
 
 call plug#begin('~/.vim/plugged')
+Plug 'mechatroner/rainbow_csv'
 Plug 'scrooloose/nerdtree'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'kassio/neoterm'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}"
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'elixir-editors/vim-elixir'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'mlochbaum/BQN', {'rtp': 'editors/vim'}
