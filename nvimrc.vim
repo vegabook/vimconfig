@@ -13,7 +13,6 @@ Plug 'scrooloose/nerdtree'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'kassio/neoterm'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'elixir-editors/vim-elixir'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'mlochbaum/BQN', {'rtp': 'editors/vim'}
 Plug 'git@git.sr.ht:~detegr/nvim-bqn'
@@ -53,7 +52,7 @@ autocmd BufEnter */assets/css/*.*ex* colorscheme base16-atelierlakeside
 
 " generic
 autocmd BufEnter *html* set tabstop=2|set shiftwidth=2
-autocmd BufEnter *.ex set tabstop=2|set shiftwidth=2
+autocmd BufEnter *.ex set tabstop=2|set shiftwidth=2|colorscheme antares
 autocmd BufEnter *.exs set tabstop=2|set shiftwidth=2
 autocmd BufEnter *.eex set tabstop=2|set shiftwidth=2
 autocmd BufEnter *.heex set tabstop=2|set shiftwidth=2
